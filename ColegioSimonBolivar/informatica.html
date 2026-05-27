@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Informática | SimónGram</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f3f5fa;
+    color:#111;
+    padding:20px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+/* BOTON */
+
+.volver{
+    display:inline-block;
+    margin-bottom:20px;
+    background:#062b63;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:14px;
+    transition:0.3s;
+}
+
+.volver:hover{
+    background:#f5c542;
+    color:#062b63;
+}
+
+/* TARJETAS */
+
+.card{
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    margin-bottom:25px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* IMAGENES */
+
+.card img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+}
+
+/* CONTENIDO */
+
+.content{
+    padding:30px;
+}
+
+.content h1{
+    color:#062b63;
+    margin-bottom:20px;
+    font-size:38px;
+}
+
+.content h2{
+    color:#062b63;
+    margin-top:25px;
+    margin-bottom:15px;
+}
+
+.content p{
+    line-height:1.9;
+    margin-bottom:18px;
+    font-size:17px;
+}
+
+/* LISTA */
+
+.lista{
+    padding-left:20px;
+    margin-top:10px;
+}
+
+.lista li{
+    margin-bottom:10px;
+    font-size:17px;
+}
+
+/* GALERIA */
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+    margin-top:20px;
+}
+
+.galeria img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+/* VIDEOS */
+
+video{
+    width:100%;
+    border-radius:20px;
+    margin-top:15px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+body{
+    padding:10px;
+}
+
+.card img{
+    height:220px;
+}
+
+.content{
+    padding:20px;
+}
+
+.content h1{
+    font-size:28px;
+}
+
+.content p,
+.lista li{
+    font-size:15px;
+}
+
+}
+
+</style>
+    <link rel="stylesheet" href="dark-mode.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+`r`n    <button class="dark-btn" onclick="toggleTheme()" type="button">Modo Oscuro</button>`r`n<!-- BOTON VOLVER -->
+
+<a href="index.html" class="volver">
+
+⬅ Volver al Inicio
+
+</a>
+
+<!-- PORTADA -->
+
+<div class="card">
+
+<img src="INFORMATICA.jpeg">
+
+<div class="content">
+
+<h1> Bachillerato Técnico en Informática</h1>
+
+<p>
+La especialidad de Informática está orientada a estudiantes apasionados por la tecnología, programación y desarrollo digital.
+</p>
+
+<p>
+Es una de las áreas con mayor proyección al futuro, permitiendo a los estudiantes desarrollar habilidades técnicas, creativas y tecnológicas.
+</p>
+
+<p>
+Los estudiantes aprenden programación, diseño web, mantenimiento de computadoras, redes y bases de datos.
+</p>
+
+</div>
+
+</div>
+
+<!-- MATERIAS -->
+
+<div class="card">
+
+<div class="content">
+
+<h1> Materias Técnicas</h1>
+
+<ul class="lista">
+
+<li>Programación y Base de Datos</li>
+
+<li>Diseño Web</li>
+
+<li>Sistemas Operativos</li>
+
+<li>Soporte Técnico</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<!-- PERFIL -->
+
+<div class="card">
+
+<div class="content">
+
+<h1> Perfil del Estudiante</h1>
+
+<p>
+El estudiante de informática se caracteriza por ser creativo, analítico y apasionado por resolver problemas tecnológicos.
+</p>
+
+<p>
+Además desarrolla habilidades en innovación, trabajo en equipo y creación de proyectos digitales.
+</p>
+
+<p>
+La especialidad prepara a los estudiantes para continuar estudios universitarios o ingresar al mundo laboral tecnológico.
+</p>
+
+</div>
+
+</div>
+
+<!-- GALERIA -->
+
+<div class="card">
+
+<div class="content">
+
+<h1> Galería de Informática</h1>
+
+<div class="galeria">
+
+<img src="informatica_1.jpeg">
+
+<img src="informatica_2.jpeg">
+
+<img src="informatica_3.jpeg">
+
+<img src="informatica_4.jpeg">
+
+<img src="info_2.jpeg">
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ENTREVISTAS -->
+
+<div class="card">
+
+<div class="content">
+
+<h1>Entrevistas</h1>
+
+<p>
+Entrevistas realizadas a docentes y licenciados del área de informática.
+</p>
+
+<!-- VIDEO 1 -->
+
+<h2>Entrevista al magíster Galo Abalco </h2>
+
+<video controls>
+
+<source src="lice_galo_INFORMATICA.mp4" type="video/mp4">
+
+</video>
+
+<!-- VIDEO 2 -->
+
+<h2> Entrevista al magíster Fernando Pozo</h2>
+
+<video controls>
+
+<source src="Licen_fernando_INFORMATICA.mp4" type="video/mp4">
+
+</video>
+
+</div>
+
+</div>
+
+<!-- LOGRO -->
+
+<div class="card">
+
+<img src="informatica_2.jpeg">
+
+<div class="content">
+
+<h1>Logro Reciente</h1>
+
+<p>
+La especialidad de Informática obtuvo el primer lugar en un concurso intercolegial, demostrando el talento y preparación de sus estudiantes.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+    <script src="dark-mode.js"></script>
+</body>
+</html>

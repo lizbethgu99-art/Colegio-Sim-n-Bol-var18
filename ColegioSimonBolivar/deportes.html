@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Deportes | SimónGram</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f3f5fa;
+    color:#111;
+    padding:20px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+/* BOTON */
+
+.volver{
+    display:inline-block;
+    margin-bottom:20px;
+    background:#062b63;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:14px;
+    transition:0.3s;
+}
+
+.volver:hover{
+    background:#f5c542;
+    color:#062b63;
+}
+
+/* TARJETAS */
+
+.card{
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    margin-bottom:25px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* IMAGENES */
+
+.card img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+}
+
+/* CONTENIDO */
+
+.content{
+    padding:30px;
+}
+
+.content h1{
+    color:#062b63;
+    margin-bottom:20px;
+    font-size:38px;
+}
+
+.content h2{
+    color:#062b63;
+    margin-top:25px;
+    margin-bottom:15px;
+}
+
+.content p{
+    line-height:1.9;
+    margin-bottom:18px;
+    font-size:17px;
+}
+
+/* GALERIA */
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+    margin-top:20px;
+}
+
+.galeria img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+/* VIDEOS */
+
+video{
+    width:100%;
+    border-radius:20px;
+    margin-top:15px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+body{
+    padding:10px;
+}
+
+.card img{
+    height:220px;
+}
+
+.content{
+    padding:20px;
+}
+
+.content h1{
+    font-size:28px;
+}
+
+.content p{
+    font-size:15px;
+}
+
+}
+
+</style>
+    <link rel="stylesheet" href="dark-mode.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+`r`n    <button class="dark-btn" onclick="toggleTheme()" type="button">Modo Oscuro</button>`r`n<!-- BOTON -->
+
+<a href="index.html" class="volver">
+
+⬅ Volver al Inicio
+
+</a>
+
+<!-- PORTADA -->
+
+<div class="card">
+
+<img src="Grupo_de_futbol_1.jpeg">
+
+<div class="content">
+
+<h1> Grupos Deportivos</h1>
+
+<p>
+El Colegio Simón Bolívar cuenta con diferentes grupos deportivos que representan con orgullo a la institución en campeonatos y eventos intercolegiales.
+</p>
+
+<p>
+Los deportes fortalecen la disciplina, trabajo en equipo, liderazgo y la salud física de los estudiantes.
+</p>
+
+<p>
+Los estudiantes desarrollan habilidades deportivas mientras viven experiencias de compañerismo y competencia sana.
+</p>
+
+</div>
+
+</div>
+
+<!-- FUTBOL -->
+
+<div class="card">
+
+<img src="Grupo_de_futbol_5.jpeg">
+
+<div class="content">
+
+<h1>Selección de Fútbol</h1>
+
+<p>
+La selección de fútbol femenino y masculino participa en campeonatos intercolegiales y actividades deportivas representando al colegio.
+</p>
+
+<p>
+Durante los entrenamientos los estudiantes aprenden técnicas de juego, estrategia y trabajo en equipo.
+</p>
+
+<p>
+Este grupo motiva a los estudiantes a mejorar su rendimiento físico y deportivo.
+</p>
+
+</div>
+
+</div>
+
+<!-- BASQUET -->
+
+<div class="card">
+<div class="content">
+
+<h1> Básquet Masculino</h1>
+
+<p>
+El equipo de básquet participa en torneos deportivos y eventos institucionales.
+</p>
+
+<p>
+Los estudiantes desarrollan coordinación, velocidad, disciplina y estrategia deportiva.
+</p>
+
+<p>
+El básquet fortalece el compañerismo y el espíritu competitivo de los integrantes.
+</p>
+
+</div>
+
+</div>
+
+<!-- ECUAVOLEY -->
+
+<div class="card">
+
+<img src="GRUPO_DE_VOLEY_4.jpeg">
+
+<div class="content">
+
+<h1>Selección de Ecuavóley</h1>
+
+<p>
+El ecuavóley es uno de los deportes tradicionales más importantes dentro del colegio.
+</p>
+
+<p>
+La selección femenina y masculina participa en torneos y actividades deportivas institucionales.
+</p>
+
+<p>
+Recientemente la selección obtuvo el segundo lugar en competencias intercolegiales.
+</p>
+
+</div>
+
+</div>
+
+<!-- GALERIA -->
+
+<div class="card">
+
+<div class="content">
+
+<h1> Galería Deportiva</h1>
+
+<div class="galeria">
+
+<img src="Grupo_de_futbol_6.jpeg">
+
+<img src="Grupo_de_futbol_5.jpeg">
+
+<img src="Grupo_de_futbol_4.jpeg">
+
+<img src="Grupo_de_futbol_3.jpeg">
+
+<img src="Grupo_de_futbol_2.jpeg">
+
+<img src="GRUPO_DE_VOLEY_1.jpeg">
+
+<img src="GRUPO_DE_VOLEY_2.jpeg">
+
+<img src="GRUPO_DE_VOLEY_4.jpeg">
+
+<img src="GRUPO_DE_VOLEY_5.jpeg">
+
+<img src="GRUPO_DE_VOLEY_3.jpeg">
+
+</div>
+
+</div>
+
+</div>
+
+<!-- FRASE -->
+
+<div class="card">
+
+<img src="DEPORTES.jpeg">
+
+<div class="content">
+
+<h1> Disciplina y Esfuerzo</h1>
+
+<p>
+“El deporte fortalece el cuerpo, la disciplina y el orgullo de representar al Colegio Simón Bolívar.”
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+    <script src="dark-mode.js"></script>
+</body>
+</html>

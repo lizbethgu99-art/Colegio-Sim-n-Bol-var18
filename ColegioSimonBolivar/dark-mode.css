@@ -1,0 +1,72 @@
+/* Dark mode shared styles */
+body.dark {
+    background: #111827 !important;
+    color: #f8fafc !important;
+}
+
+body.dark a,
+body.dark .volver,
+body.dark .dark-btn {
+    color: #062b63 !important;
+}
+
+body.dark .volver,
+body.dark .dark-btn {
+    background: #f5c542 !important;
+    border-color: transparent !important;
+}
+
+body.dark .card,
+body.dark .banner,
+body.dark .destacadas,
+body.dark .post,
+body.dark .content,
+body.dark .galeria,
+body.dark .right {
+    background: #1f2937 !important;
+    color: #f8fafc !important;
+    border-color: rgba(255,255,255,0.08) !important;
+}
+
+body.dark .content h1,
+body.dark .content h2,
+body.dark .card h2,
+body.dark .perfil-info h1,
+body.dark .logo h2 {
+    color: #f5c542 !important;
+}
+
+body.dark .story p,
+body.dark .content p,
+body.dark .card p,
+body.dark .contacto p,
+body.dark .lista li,
+body.dark .right p,
+body.dark .card h2 {
+    color: #f8fafc !important;
+}
+
+body.dark .menu a {
+    background: rgba(255,255,255,0.08) !important;
+    color: white !important;
+    border-color: rgba(255,255,255,0.12) !important;
+}
+
+body.dark .menu a:hover,
+body.dark .menu a.active {
+    background: #f5c542 !important;
+    color: #062b63 !important;
+}
+
+body.dark .sidebar {
+    background: #070b1b !important;
+}
+
+body.dark .logo img {
+    border-color: #f5c542 !important;
+}
+
+body.dark .dark-btn,
+body.dark .volver {
+    font-weight: 700 !important;
+}

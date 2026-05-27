@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SimónGram | Colegio Simón Bolívar</title>
+
+    <!-- FUENTE -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ================= GENERAL ================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Make images and media fluid to avoid overflow */
+        img,
+        .banner-img,
+        .post img,
+        .story img,
+        .perfil img,
+        .logo img,
+        .video-item img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        body {
+            background: linear-gradient(180deg, #eef1f7 0%, #f3f5fa 35%, #e8edf7 100%);
+            color: #111;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ================= CONTENEDOR FLUIDO TOTAL ================= */
+
+        .container {
+            display: grid;
+            /* Mantiene las proporciones perfectas: menú a la izquierda, información a la derecha y el centro toma todo el espacio restante */
+            grid-template-columns: 250px 1fr 300px;
+            gap: 25px;
+            padding: 20px;
+            
+            /* CAMBIO CLAVE AQUÍ: Eliminamos el límite de 1200px para que se estire al 100% en cualquier monitor */
+            width: 100%;
+            max-width: 100%;
+            
+            margin: 0;
+            align-items: start;
+        }
+
+        .feed {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            min-width: 0;
+        }
+
+        /* Ajuste para que el escudo gigante del banner no deforme la columna central */
+        .banner-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        /* ================= SIDEBAR ================= */
+
+        .sidebar {
+            background: linear-gradient(180deg, #0c356c 0%, #062b63 100%);
+            color: white;
+            border-radius: 25px;
+            padding: 25px;
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: sticky;
+            top: 20px;
+            align-self: start;
+            box-shadow: 0 18px 55px rgba(0, 0, 0, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .logo img {
+            width: 100px;
+            border-radius: 50%;
+            border: 4px solid #f5c542;
+        }
+
+        .logo h2 {
+            margin-top: 15px;
+            color: #f5c542;
+        }
+
+        .logo p {
+            font-size: 14px;
+        }
+
+        /* MENU */
+
+        .menu {
+            margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            overflow: visible;
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            background: transparent;
+            border: 2px solid #f5c542;
+            color: white;
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            font-size: 24px;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            line-height: 1;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            padding: 14px 16px;
+            border-radius: 16px;
+            transition: 0.3s ease;
+            font-size: 15px;
+            white-space: nowrap;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .menu a:hover,
+        .menu a:focus {
+            background: #f5c542;
+            color: #062b63;
+            border-color: transparent;
+        }
+
+        .menu a.active {
+            background: #f5c542;
+            color: #062b63;
+            font-weight: 600;
+        }
+
+        /* BOTON OSCURO */
+
+        .dark-btn {
+            margin-top: 30px;
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 15px;
+            background: #f5c542;
+            color: #062b63;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* ================= FEED ================= */
+
+        .feed {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            min-width: 0;
+        }
+
+        /* PERFIL */
+
+        .banner {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+        }
+
+        .banner-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .perfil {
+            padding: 20px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .perfil img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 4px solid #f5c542;
+            margin-top: -70px;
+            background: white;
+        }
+
+        .perfil-info h1 {
+            color: #062b63;
+            font-size: 35px;
+            font-weight: 700;
+        }
+
+        .perfil-info p {
+            margin-top: 5px;
+        }
+
+        /* DESTACADAS */
+
+        .destacadas {
+            background: white;
+            border-radius: 25px;
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .story {
+            text-align: center;
+            min-width: 90px;
+            text-decoration: none;
+            color: #111;
+        }
+
+        .story img {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            border: 3px solid #f5c542;
+            object-fit: cover;
+            transition: 0.3s;
+        }
+
+        .story img:hover {
+            transform: scale(1.08);
+        }
+
+        .story p {
+            margin-top: 8px;
+            font-size: 14px;
+        }
+
+        /* PUBLICACIONES */
+
+        .post {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px 20px;
+        }
+
+        .post-header img {
+            width: 45px !important;
+            height: 45px !important;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #f5c542;
+        }
+
+        .post-header h3 {
+            color: #062b63;
+        }
+
+        .post img {
+            width: 100%;
+            height: auto;
+            max-height: 60vh;
+            object-fit: cover;
+        }
+
+        .post-content {
+            padding: 20px;
+        }
+
+        .post-content h2 {
+            margin-bottom: 10px;
+            color: #062b63;
+        }
+
+        /* ================= DERECHA ================= */
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            min-width: 0;
+        }
+
+        .card {
+            background: white;
+            border-radius: 25px;
+            padding: 22px;
+            box-shadow: 0 20px 45px rgba(2, 10, 45, 0.07);
+            border: 1px solid rgba(5, 18, 49, 0.06);
+        }
+
+        .card h2 {
+            color: #062b63;
+            margin-bottom: 15px;
+            font-size: 1.35rem;
+        }
+
+        .video-item {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .video-item img {
+            width: 90px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* CONTACTO */
+
+        .contacto p {
+            margin-bottom: 10px;
+        }
+
+        /* ================= MODO OSCURO ================= */
+
+        .dark {
+            background: #111827;
+            color: white;
+        }
+
+        .dark .sidebar {
+            background: #000;
+        }
+
+        .dark .banner,
+        .dark .destacadas,
+        .dark .post,
+        .dark .card {
+            background: #1f2937;
+            color: white;
+        }
+
+        .dark .perfil-info h1 {
+            color: #f5c542;
+        }
+
+        .dark .post-header h3 {
+            color: #f5c542;
+        }
+
+        .dark .story {
+            color: white;
+        }
+
+        .dark .post-content h2 {
+            color: #f5c542;
+        }
+
+        /* Encabezados en la columna derecha (Autoridades / Información / Contactos) */
+        .dark .card h2 {
+            color: #f5c542;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        /* ================= CONTROL DE PANTALLAS (RESPONSIVE) ================= */
+
+        /* En laptops o pantallas intermedias ocultamos la columna derecha para que no se aplaste el centro */
+        @media (max-width: 1150px) {
+            .container {
+                grid-template-columns: 230px 1fr;
+            }
+            .right {
+                display: none;
+            }
+        }
+
+        /* En teléfonos celulares todo se hace una sola columna fluida */
+        @media screen and (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                padding: 10px;
+            }
+
+            .sidebar {
+                width: 100%;
+                max-height: none;
+                position: relative;
+                top: 0;
+                padding: 15px;
+                border-radius: 20px;
+            }
+
+            .logo {
+                margin-bottom: 0;
+            }
+
+            .logo img {
+                width: 70px;
+                height: 70px;
+            }
+
+            .logo h2 {
+                font-size: 20px;
+            }
+
+            .menu-toggle {
+                display: flex;
+                position: absolute;
+                top: 15px;
+                right: 15px;
+            }
+
+            .menu {
+                display: none;
+                margin-top: 15px;
+            }
+
+            .menu.open {
+                display: flex;
+            }
+
+            .menu a {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            .banner-img {
+                max-height: 160px;
+            }
+
+            .perfil {
+                flex-direction: column;
+                text-align: center;
+                padding: 15px;
+            }
+
+            .perfil img {
+                margin-top: -45px;
+                width: 80px;
+                height: 80px;
+            }
+
+            .perfil-info h1 {
+                font-size: 24px;
+            }
+
+            .right {
+                display: flex;
+                width: 100%;
+            }
+        }
+
+        /* Extra small screens tweaks */
+        @media (max-width: 480px) {
+            body {
+                font-size: 14px;
+            }
+
+            .logo h2 {
+                font-size: 18px;
+            }
+
+            .menu {
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+
+            .menu a {
+                min-width: 0;
+                padding: 8px;
+                font-size: 13px;
+                white-space: normal;
+            }
+
+            .perfil-info h1 {
+                font-size: 20px;
+            }
+
+            .container {
+                padding: 8px;
+            }
+
+            .sidebar {
+                padding: 12px;
+                border-radius: 14px;
+            }
+
+            .perfil img {
+                margin-top: -40px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <div class="sidebar">
+
+            <div class="logo">
+
+                <img src="logo.jpeg">
+
+                <h2>SimónGram</h2>
+
+                <p>Educación • Disciplina • Futuro</p>
+
+            </div>
+
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menú">☰</button>
+
+            <div class="menu">
+
+                <a href="#"> Inicio</a>
+                <a href="historia.html"> Historia</a>
+                <a href="informatica.html">Informática</a>
+                <a href="contabilidad.html"> Contabilidad</a>
+                <a href="bgu.html"> BGU</a>
+                <a href="banda.html"> Banda</a>
+                <a href="danza.html"> Danza</a>
+                <a href="deportes.html"> Deportes</a>
+
+            </div>
+
+            <button class="dark-btn" onclick="modoOscuro()">
+
+                Modo Oscuro
+
+            </button>
+
+        </div>
+
+        <!-- ================= CENTRO ================= -->
+
+        <div class="feed">
+
+            <!-- PERFIL -->
+
+            <div class="banner">
+
+                <img src="logo.jpeg" class="banner-img">
+
+                <div class="perfil">
+
+                    <img src="logo.jpeg">
+
+                    <div class="perfil-info">
+
+                        <h1>Colegio Simón Bolívar</h1>
+
+                        <p>Quito, Ecuador</p>
+
+                        <p>
+                            Institución educativa reconocida por su excelencia académica, valores y formación integral.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- DESTACADAS -->
+
+            <div class="destacadas">
+
+                <a href="historia.html" class="story">
+
+                    <img src="infrastructura_2.jpeg">
+
+                    <p>Historia</p>
+
+                </a>
+
+                <a href="himno y barras.html" class="story">
+
+                    <img src="logo.jpeg">
+
+                    <p>Himno y Barras</p>
+
+                </a>
+
+                <a href="informatica.html" class="story">
+
+                    <img src="INFORMATICA.jpeg">
+
+                    <p>Informática</p>
+
+                </a>
+
+                <a href="contabilidad.html" class="story">
+
+                    <img src="Contabilidad.jpeg">
+
+                    <p>Contabilidad</p>
+
+                </a>
+
+                <a href="bgu.html" class="story">
+
+                    <img src="BGU.jpeg">
+
+                    <p>BGU</p>
+
+                </a>
+
+                <a href="banda.html" class="story">
+
+                    <img src="Grupo_de_banda_1.jpeg">
+
+                    <p>Banda</p>
+
+                </a>
+
+                <a href="danza.html" class="story">
+
+                    <img src="Grupo_de_danza_1.jpeg">
+
+                    <p>Danza</p>
+
+                </a>
+
+                <a href="bastoneras.html" class="story">
+
+                    <img src="BASTONERAS.jpeg">
+
+                    <p>Bastoneras</p>
+
+                </a>
+
+                <a href="deportes.html" class="story">
+
+                    <img src="DEPORTES.jpeg">
+
+                    <p>Deportes</p>
+
+                </a>
+
+            </div>
+
+            <!-- AQUÍ SE CARGAN LAS PUBLICACIONES -->
+            <div id="listaNovedades"></div>
+
+            <!-- PUBLICACION 1 -->
+
+            <div class="post">
+
+                <div class="post-header">
+
+                    <img src="logo.jpeg">
+
+                    <div>
+
+                        <h3>Colegio Simón Bolívar</h3>
+
+                        <small>Hace 2 horas</small>
+
+                    </div>
+
+                </div>
+
+                <img src="Grupo_de_banda_1.jpeg">
+
+                <div class="post-content">
+
+                    <h2> Banda gana primer lugar</h2>
+
+                    <p>
+                        El grupo de banda obtuvo el primer lugar en el concurso “Forjandor de Leyendas”.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- PUBLICACION 2 -->
+
+            <div class="post">
+
+                <div class="post-header">
+
+                    <img src="logo.jpeg">
+
+                    <div>
+
+                        <h3>Colegio Simón Bolívar</h3>
+
+                        <small>Hace 1 día</small>
+
+                    </div>
+
+                </div>
+
+                <img src="informatica_1.jpeg">
+                <div class="post-content">
+
+                    <h2> Informática gana concurso</h2>
+
+                    <p>
+                        La especialidad de informática obtuvo el primer lugar en concurso intercolegial.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================= DERECHA ================= -->
+
+        <div class="right">
+
+            <!-- Autoridades -->
+
+            <div class="card">
+
+                <h2>Autoridades</h2>
+
+                <p>Rector MSc.Rodrigo Chora</p>
+
+                <br>
+
+                <p>Vicerrector matutina Lic.Pablo Toscano</p>
+
+                <br>
+
+                <p>Vicerrectora vespertina MSc. Zoraya Castillo </p>
+
+                <br>
+
+                <p>Inspectora General Lic. Veronica Fuentes</p>
+
+                <br>
+
+                <p> Subinspectora General MSc. Maria del Pilar Guevara</p>
+
+            </div>
+
+            <!-- INFORMACION -->
+
+            <div class="card">
+
+                <h2> Información</h2>
+
+                <p>Educación • Disciplina • Futuro</p>
+
+                <br>
+
+                <p>Quito, Ecuador</p>
+
+                <br>
+
+                <p>02-3947180</p>
+
+                <br>
+
+                <p>17H00791@gmail.com</p>
+
+            </div>
+
+            <!-- CONTACTOS -->
+
+            <div class="card contacto">
+
+                <h2>Contactos</h2>
+
+                <p>Río de Janeiro Oe2-140 y Av. América</p>
+
+                <p> 02-3947180</p>
+
+                <p>17H00791@gmail.com</p>
+
+            </div>
+
+        </div>
+
+        <script>
+
+            function modoOscuro() {
+                document.body.classList.toggle("dark");
+            }
+
+            function toggleMenu() {
+                const menu = document.querySelector('.menu');
+                const button = document.querySelector('.menu-toggle');
+                if (!menu || !button) return;
+                menu.classList.toggle('open');
+                button.textContent = menu.classList.contains('open') ? '✕' : '☰';
+            }
+        </script>
+
+</body>
+
+</html>

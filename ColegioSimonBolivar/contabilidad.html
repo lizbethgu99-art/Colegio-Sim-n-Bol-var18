@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contabilidad | SimónGram</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f3f5fa;
+    color:#111;
+    padding:20px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+/* BOTON */
+
+.volver{
+    display:inline-block;
+    margin-bottom:20px;
+    background:#062b63;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:14px;
+    transition:0.3s;
+}
+
+.volver:hover{
+    background:#f5c542;
+    color:#062b63;
+}
+
+/* TARJETAS */
+
+.card{
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    margin-bottom:25px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* IMAGENES */
+
+.card img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+}
+
+/* CONTENIDO */
+
+.content{
+    padding:30px;
+}
+
+.content h1{
+    color:#062b63;
+    margin-bottom:20px;
+    font-size:38px;
+}
+
+.content h2{
+    color:#062b63;
+    margin-top:25px;
+    margin-bottom:15px;
+}
+
+.content p{
+    line-height:1.9;
+    margin-bottom:18px;
+    font-size:17px;
+}
+
+/* LISTA */
+
+.lista{
+    padding-left:20px;
+    margin-top:10px;
+}
+
+.lista li{
+    margin-bottom:10px;
+    font-size:17px;
+}
+
+/* GALERIA */
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+    margin-top:20px;
+}
+
+.galeria img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+/* VIDEOS */
+
+video{
+    width:100%;
+    border-radius:20px;
+    margin-top:15px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+body{
+    padding:10px;
+}
+
+.card img{
+    height:220px;
+}
+
+.content{
+    padding:20px;
+}
+
+.content h1{
+    font-size:28px;
+}
+
+.content p,
+.lista li{
+    font-size:15px;
+}
+
+}
+
+</style>
+    <link rel="stylesheet" href="dark-mode.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+`r`n    <button class="dark-btn" onclick="toggleTheme()" type="button">Modo Oscuro</button>`r`n<!-- BOTON -->
+
+<a href="index.html" class="volver">
+
+⬅ Volver al Inicio
+
+</a>
+
+<!-- PORTADA -->
+
+<div class="card">
+
+<img src="Contabilidad.jpeg">
+
+<div class="content">
+
+<h1> Bachillerato Técnico en Contabilidad</h1>
+
+<p>
+La especialidad de Contabilidad prepara a los estudiantes en el manejo financiero, administrativo y económico de empresas e instituciones.
+</p>
+
+<p>
+Es una de las áreas más importantes para el mundo laboral y empresarial, permitiendo desarrollar habilidades organizativas y administrativas.
+</p>
+
+<p>
+Los estudiantes aprenden procesos contables, tributación, facturación y manejo de programas financieros.
+</p>
+
+</div>
+
+</div>
+
+<!-- MATERIAS -->
+
+<div class="card">
+
+<div class="content">
+
+<h1>Materias Técnicas</h1>
+
+<ul class="lista">
+
+<li> Contabilidad General</li>
+
+<li> Contabilidad de Costo</li>
+
+<li> Paquete Contable </li>
+
+<li> Contabilidad Bancaria</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<!-- PERFIL -->
+
+<div class="card">
+
+<div class="content">
+
+<h1>Perfil del Estudiante</h1>
+
+<p>
+El estudiante de Contabilidad se caracteriza por ser organizado, responsable y analítico.
+</p>
+
+<p>
+Desarrolla habilidades en administración, manejo financiero y resolución de problemas económicos.
+</p>
+
+<p>
+Esta especialidad permite continuar estudios universitarios o incorporarse al ámbito laboral administrativo y financiero.
+</p>
+
+</div>
+
+</div>
+
+<!-- GALERIA -->
+
+<div class="card">
+
+<div class="content">
+
+<h1>Galería de Contabilidad</h1>
+
+<div class="galeria">
+
+<img src="CONTA1.jpg">
+
+<img src="CONTA2.jpg">
+
+<img src="CONTA3.jpg">
+
+<img src="CONTA4.jpg">
+
+</div>
+
+</div>
+
+</div>
+
+<!-- FRASE -->
+
+<div class="card">
+
+<img src="CONTA2.jpg">
+
+<div class="content">
+
+<h1>Administración y Futuro</h1>
+
+<p>
+“El motor financiero de cualquier empresa. Aprende a administrar recursos, gestionar impuestos y liderar el mundo de los negocios.”
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+    <script src="dark-mode.js"></script>
+</body>
+</html>
