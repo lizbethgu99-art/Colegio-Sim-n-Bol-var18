@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Himno y Barras | SimónGram</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f3f5fa;
+            color: #111;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* BOTON */
+
+        .volver {
+            display: inline-block;
+            margin-bottom: 20px;
+            background: #062b63;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 14px;
+            transition: 0.3s;
+        }
+
+        .volver:hover {
+            background: #f5c542;
+            color: #062b63;
+        }
+
+        /* TARJETAS */
+
+        .card {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* IMAGENES */
+
+        .card img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        /* CONTENIDO */
+
+        .content {
+            padding: 30px;
+        }
+
+        .content h1 {
+            color: #062b63;
+            margin-bottom: 20px;
+            font-size: 38px;
+        }
+
+        .content h2 {
+            color: #062b63;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        .content p {
+            line-height: 1.9;
+            margin-bottom: 18px;
+            font-size: 17px;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:900px) {
+
+            body {
+                padding: 10px;
+            }
+
+            .card img {
+                height: 220px;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .content h1 {
+                font-size: 28px;
+            }
+
+            .content p {
+                font-size: 15px;
+            }
+
+        }
+    </style>
+    <link rel="stylesheet" href="dark-mode.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        `r`n    <button class="dark-btn" onclick="toggleTheme()" type="button">Modo Oscuro</button>`r`n<!-- BOTON -->
+
+        <a href="index.html" class="volver">
+
+            ⬅ Volver al Inicio
+
+        </a>
+
+        <!-- HIMNO -->
+
+        <div class="card">
+
+            <img src="HIMNO.jpg">
+
+            <div class="content">
+
+                <h1>Himno del Colegio</h1>
+
+                <p>
+                    Todo el orbe se pone de pie para honrar de Bolívar el nombre que en la tierra no hay quien no se
+                    asombre de su espada mirando el fulgor.
+                </p>
+
+                <p>
+                    Ante el bronce su efigie sagrada entonemos un himno de gloria, que en el mundo repita la Historia de
+                    su invicto y heroico campeón.
+                </p>
+
+                <p>
+                    Si en Caracas su cuerpo reposa en un templo mamóreo y grandioso otro templo muy alto y hermoso, le
+                    consagra también mi nación.
+                </p>
+
+                <p>
+                    De laureles con áureas coronas demos culto a su altar sin ejemplo, como el mármol que cubre su
+                    templo siempre eterno será nuestro amor.
+                </p>
+
+                <br>
+
+                <p>
+                    <b> Letra:</b> Presbítero Enrique Nájera
+                </p>
+
+                <p>
+                    <b> Música:</b> Reinaldo Suárez
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- BARRAS -->
+
+        <div class="card">
+
+            <img src="BARRAS.jpg">
+
+            <div class="content">
+
+                <h1>Barras del Colegio</h1>
+
+                <!-- PRIMERA BARRA -->
+
+                <h2>Primera Barra</h2>
+
+                <p>
+                    ¡POR EL COLEGIO! Simón Bolívar, gritamos tu nombre que perdure en el tiempo y en el corazón de
+                    quienes te queremos, azul y blanco los colores que defienden con honor el futuro de la patria.
+                </p>
+
+                <p>
+                    ¡Somos del Colegio Simón Bolívar, sí señor!
+                </p>
+
+                <p>
+                    ¡C - O! Co <br>
+                    ¡L - E! Le <br>
+                    ¡GIO! GIO <br>
+                    ¡Colegio Simón Bolívar, sí señor!
+                </p>
+
+                <!-- SEGUNDA BARRA -->
+
+                <h2>Segunda Barra</h2>
+
+                <p>
+                    Que dice la "C" Colegio <br>
+                    Que dice la "S" Simón <br>
+                    Que dice la "B" Bolívar <br>
+                    CSB Colegio Simón Bolívar ras
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- FRASE -->
+
+        <div class="card">
+
+            <img src="logo.jpeg">
+
+            <div class="content">
+
+                <h1> Orgullo Bolivariano</h1>
+
+                <p>
+                    “El himno y las barras representan la unión, identidad y orgullo de todos los estudiantes del
+                    Colegio Simón Bolívar.”
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="dark-mode.js"></script>
+</body>
+
+</html>

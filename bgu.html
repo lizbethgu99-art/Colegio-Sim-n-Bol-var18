@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BGU | SimónGram</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f3f5fa;
+    color:#111;
+    padding:20px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+/* BOTON */
+
+.volver{
+    display:inline-block;
+    margin-bottom:20px;
+    background:#062b63;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:14px;
+    transition:0.3s;
+}
+
+.volver:hover{
+    background:#f5c542;
+    color:#062b63;
+}
+
+/* TARJETAS */
+
+.card{
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    margin-bottom:25px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* IMAGENES */
+
+.card img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+}
+
+/* CONTENIDO */
+
+.content{
+    padding:30px;
+}
+
+.content h1{
+    color:#062b63;
+    margin-bottom:20px;
+    font-size:38px;
+}
+
+.content h2{
+    color:#062b63;
+    margin-top:25px;
+    margin-bottom:15px;
+}
+
+.content p{
+    line-height:1.9;
+    margin-bottom:18px;
+    font-size:17px;
+}
+
+/* LISTA */
+
+.lista{
+    padding-left:20px;
+    margin-top:10px;
+}
+
+.lista li{
+    margin-bottom:10px;
+    font-size:17px;
+}
+
+/* GALERIA */
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+    margin-top:20px;
+}
+
+.galeria img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+/* VIDEOS */
+
+video{
+    width:100%;
+    border-radius:20px;
+    margin-top:15px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+body{
+    padding:10px;
+}
+
+.card img{
+    height:220px;
+}
+
+.content{
+    padding:20px;
+}
+
+.content h1{
+    font-size:28px;
+}
+
+.content p,
+.lista li{
+    font-size:15px;
+}
+
+}
+
+</style>
+    <link rel="stylesheet" href="dark-mode.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+`r`n    <button class="dark-btn" onclick="toggleTheme()" type="button">Modo Oscuro</button>`r`n<!-- BOTON -->
+
+<a href="index.html" class="volver">
+
+⬅ Volver al Inicio
+
+</a>
+
+<!-- PORTADA -->
+
+<div class="card">
+
+<img src="BGU.jpeg">
+
+<div class="content">
+
+<h1> Bachillerato General Unificado (BGU)</h1>
+
+<p>
+El Bachillerato General Unificado en Ciencias brinda una formación académica integral para preparar a los estudiantes hacia la universidad y el futuro profesional.
+</p>
+
+<p>
+Esta especialidad fortalece conocimientos científicos, matemáticos, sociales y humanísticos.
+</p>
+
+<p>
+Los estudiantes desarrollan habilidades de análisis, razonamiento lógico, investigación y pensamiento crítico.
+</p>
+
+</div>
+
+</div>
+
+<!-- MATERIAS -->
+
+<div class="card">
+
+<div class="content">
+
+<h1>Áreas de Aprendizaje</h1>
+
+<ul class="lista">
+
+<li> Matemáticas avanzadas</li>
+
+<li>Física y Química</li>
+
+<li> Biología </li>
+
+<li> Lengua y Literatura</li>
+
+<li>Historia</li>
+
+<li>Filosofía y Emprendimiento</li>
+
+<li>Inglés</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<!-- PERFIL -->
+
+<div class="card">
+
+<div class="content">
+
+<h1>Perfil del Estudiante</h1>
+
+<p>
+El estudiante de BGU se caracteriza por tener una formación académica amplia y sólida.
+</p>
+
+<p>
+Desarrolla capacidades de investigación, liderazgo, razonamiento y preparación para carreras universitarias.
+</p>
+
+<p>
+Esta especialidad permite acceder a carreras como Medicina, Ingeniería, Derecho, Arquitectura, Educación y muchas más.
+</p>
+
+</div>
+
+</div>
+
+<!-- GALERIA -->
+
+<div class="card">
+
+<div class="content">
+
+<h1>Galería BGU</h1>
+
+<div class="galeria">
+
+<img src="BGU2.jpg">
+
+<img src="BGU1.png">
+
+<img src="BGU3.jpg">
+
+<img src="BGU4.jpg">
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ENTREVISTAS -->
+
+<div class="card">
+
+<div class="content">
+
+<h1>Entrevistas</h1>
+
+<p>
+Entrevistas realizadas a docentes y licenciados del área de BGU.
+</p>
+
+<!-- VIDEO 1 -->
+
+<h2>Entrevista al Licenciado David Recalde</h2>
+
+<video controls>
+
+<source src="lice_david_BGU.mp4" type="video/mp4">
+
+</video>
+
+<!-- VIDEO 2 -->
+
+<h2>Entrevista a la licenciada Johana Guerrero</h2>
+
+<video controls>
+
+<source src="Licen_Johana_BGU.mp4" type="video/mp4">
+
+</video>
+
+</div>
+
+</div>
+
+<!-- FRASE -->
+
+<div class="card">
+
+<img src="BGU5.jpg">
+
+<div class="content">
+
+<h1> Formación Integral</h1>
+
+<p>
+“Una formación integral y científica que abre las puertas a todas las carreras universitarias del país.”
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+    <script src="dark-mode.js"></script>
+</body>
+</html>

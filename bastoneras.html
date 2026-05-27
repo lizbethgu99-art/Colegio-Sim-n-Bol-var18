@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bastoneras | SimónGram</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f3f5fa;
+    color:#111;
+    padding:20px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+/* BOTON */
+
+.volver{
+    display:inline-block;
+    margin-bottom:20px;
+    background:#062b63;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:14px;
+    transition:0.3s;
+}
+
+.volver:hover{
+    background:#f5c542;
+    color:#062b63;
+}
+
+/* TARJETAS */
+
+.card{
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    margin-bottom:25px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* IMAGENES */
+
+.card img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+}
+
+/* CONTENIDO */
+
+.content{
+    padding:30px;
+}
+
+.content h1{
+    color:#062b63;
+    margin-bottom:20px;
+    font-size:38px;
+}
+
+.content h2{
+    color:#062b63;
+    margin-top:25px;
+    margin-bottom:15px;
+}
+
+.content p{
+    line-height:1.9;
+    margin-bottom:18px;
+    font-size:17px;
+}
+
+/* GALERIA */
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+    margin-top:20px;
+}
+
+.galeria img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+/* VIDEOS */
+
+video{
+    width:100%;
+    border-radius:20px;
+    margin-top:15px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+body{
+    padding:10px;
+}
+
+.card img{
+    height:220px;
+}
+
+.content{
+    padding:20px;
+}
+
+.content h1{
+    font-size:28px;
+}
+
+.content p{
+    font-size:15px;
+}
+
+}
+
+</style>
+    <link rel="stylesheet" href="dark-mode.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+`r`n    <button class="dark-btn" onclick="toggleTheme()" type="button">Modo Oscuro</button>`r`n<!-- BOTON -->
+
+<a href="index.html" class="volver">
+
+⬅ Volver al Inicio
+
+</a>
+
+<!-- PORTADA -->
+
+<div class="card">
+
+<img src="GRUPO_DE_BASTONERAS_2.jpeg">
+
+<div class="content">
+
+<h1> Grupo de Bastoneras</h1>
+
+<p>
+El grupo de bastoneras del Colegio Simón Bolívar está conformado por estudiantes talentosas que participan en desfiles, actos cívicos y eventos institucionales representando con orgullo a la institución.
+</p>
+
+<p>
+Las bastoneras destacan por su disciplina, coordinación, elegancia y creatividad en cada presentación.
+</p>
+
+<p>
+Este grupo artístico fortalece la confianza, expresión corporal y trabajo en equipo de las estudiantes.
+</p>
+
+</div>
+
+</div>
+
+<!-- INFORMACION -->
+
+<div class="card">
+
+<div class="content">
+
+<h1>Actividades del Grupo</h1>
+
+<p>
+Las bastoneras realizan coreografías y presentaciones en diferentes actividades culturales y deportivas del colegio.
+</p>
+
+<p>
+Participan en desfiles, inauguraciones, concursos y eventos especiales acompañando a la banda institucional.
+</p>
+
+<p>
+Cada presentación requiere práctica constante, coordinación y compromiso para representar de la mejor manera al Colegio Simón Bolívar.
+</p>
+
+</div>
+
+</div>
+
+<!-- GALERIA -->
+
+<div class="card">
+
+<div class="content">
+
+<h1> Galería de Bastoneras</h1>
+
+<div class="galeria">
+
+<img src="GRUPO_DE_BASTONERAS_1.jpeg">
+
+<img src="GRUPO_DE_BASTONERAS_2.jpeg">
+
+<img src="GRUPO_DE_BASTONERAS_3.jpeg">
+
+<img src="GRUPO_DE_BASTONERAS_4.jpeg">
+
+<img src="GRUPO_DE_BASTONERAS_5.jpeg">
+
+<img src="GRUPO_DE_BASTONERAS_6.jpeg">
+
+<img src="GRUPO_DE_BASTONERAS_7.jpeg">
+
+</div>
+
+</div>
+
+</div>
+
+<!-- FRASE -->
+
+<div class="card">
+
+<img src="GRUPO_DE_BASTONERAS_6.jpeg">
+
+<div class="content">
+
+<h1> Elegancia y Disciplina</h1>
+
+<p>
+“Las bastoneras representan disciplina, arte y elegancia, demostrando el orgullo de pertenecer al Colegio Simón Bolívar.”
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+    <script src="dark-mode.js"></script>
+</body>
+</html>

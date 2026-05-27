@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Danza | SimónGram</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f3f5fa;
+    color:#111;
+    padding:20px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+/* BOTON */
+
+.volver{
+    display:inline-block;
+    margin-bottom:20px;
+    background:#062b63;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:14px;
+    transition:0.3s;
+}
+
+.volver:hover{
+    background:#f5c542;
+    color:#062b63;
+}
+
+/* TARJETAS */
+
+.card{
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    margin-bottom:25px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* IMAGENES */
+
+.card img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+}
+
+/* CONTENIDO */
+
+.content{
+    padding:30px;
+}
+
+.content h1{
+    color:#062b63;
+    margin-bottom:20px;
+    font-size:38px;
+}
+
+.content h2{
+    color:#062b63;
+    margin-top:25px;
+    margin-bottom:15px;
+}
+
+.content p{
+    line-height:1.9;
+    margin-bottom:18px;
+    font-size:17px;
+}
+
+/* GALERIA */
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+    margin-top:20px;
+}
+
+.galeria img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+/* VIDEOS */
+
+video{
+    width:100%;
+    border-radius:20px;
+    margin-top:15px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+body{
+    padding:10px;
+}
+
+.card img{
+    height:220px;
+}
+
+.content{
+    padding:20px;
+}
+
+.content h1{
+    font-size:28px;
+}
+
+.content p{
+    font-size:15px;
+}
+
+}
+
+</style>
+    <link rel="stylesheet" href="dark-mode.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+`r`n    <button class="dark-btn" onclick="toggleTheme()" type="button">Modo Oscuro</button>`r`n<!-- BOTON -->
+
+<a href="index.html" class="volver">
+
+⬅ Volver al Inicio
+
+</a>
+
+<!-- PORTADA -->
+
+<div class="card">
+
+<img src="Grupo_de_danza_2.jpeg">
+
+<div class="content">
+
+<h1> Grupo de Danza</h1>
+
+<p>
+El grupo de danza del Colegio Simón Bolívar promueve la expresión artística, cultural y el talento de los estudiantes a través del baile.
+</p>
+
+<p>
+Los integrantes participan en eventos institucionales, festivales culturales, actos cívicos y presentaciones especiales representando con orgullo a la institución.
+</p>
+
+<p>
+La danza fortalece la creatividad, disciplina, coordinación y trabajo en equipo.
+</p>
+
+</div>
+
+</div>
+
+<!-- INFORMACION -->
+
+<div class="card">
+
+<div class="content">
+
+<h1> ¿Qué realiza el grupo?</h1>
+
+<p>
+El grupo de danza realiza coreografías modernas, folklóricas y artísticas en diferentes actividades del colegio.
+</p>
+
+<p>
+Los estudiantes desarrollan habilidades escénicas, expresión corporal y confianza al presentarse frente al público.
+</p>
+
+<p>
+Además, fomenta la unión, compañerismo y amor por el arte y la cultura.
+</p>
+
+</div>
+
+</div>
+
+<!-- GALERIA -->
+
+<div class="card">
+
+<div class="content">
+
+<h1> Galería de Danza</h1>
+
+<div class="galeria">
+
+<img src="Grupo_de_danza_3.jpeg">
+
+<img src="Grupo_de_danza_4.jpeg">
+
+<img src="Grupo_de_danza_5.jpeg">
+
+<img src="Grupo_de_danza_6.jpeg">
+
+<img src="Grupo_de_danza_7.jpeg">
+
+<img src="Grupo_de_danza_8.jpeg">
+
+<img src="Grupo_de_danza_9.jpeg">
+
+</div>
+
+</div>
+
+</div>
+
+<!-- VIDEOS -->
+
+<div class="card">
+
+<div class="content">
+
+<h1> Presentaciones</h1>
+
+<p>
+Videos de presentaciones y eventos realizados por el grupo de danza.
+</p>
+
+<!-- VIDEO 1 -->
+
+<h2> Presentación </h2>
+
+<video controls>
+
+<source src="PRESENTACION_DANZA.mp4" type="video/mp4">
+
+</video>
+
+<!-- ENTREVISTAS -->
+
+<div class="card">
+
+<div class="content">
+
+<h1>Entrevista a la Coordinadora </h1>
+
+<p>
+En esta sección se presenta la entrevista realizada a la licenciada acargo del grupo de danza, quienes compartira su experiencia con el grupo.
+</p>
+
+<!-- ENTREVISTA 1 -->
+
+<h2>Entrevista a la Licenciada Jennifer Jinez</h2>
+
+<video controls>
+
+<source src="licen_jennifer_DANZA.mp4" type="video/mp4">
+
+</video>
+</div>
+
+</div>
+
+<!-- FRASE -->
+
+<div class="card">
+
+<img src="Grupo_de_danza_1.jpeg">
+
+<div class="content">
+
+<h1>Arte y Cultura</h1>
+
+<p>
+“La danza permite expresar emociones, creatividad y representar con orgullo la culture y el talento estudiantil.”
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+    <script src="dark-mode.js"></script>
+</body>
+</html>
